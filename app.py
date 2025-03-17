@@ -3,7 +3,7 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app)  # Allow frontend to call backend
+CORS(app, supports_credentials=True,origins=["https://signup-ui1-production.up.railway.app"])  # Allow frontend to call backend
 
 @app.route('/')
 def home():
