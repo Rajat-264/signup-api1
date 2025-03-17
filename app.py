@@ -5,6 +5,10 @@ import os
 app = Flask(__name__)
 CORS(app)  # Allow frontend to call backend
 
+@app.route('/')
+def home():
+    return "Flask API is working!"
+
 @app.route('/api/signup', methods=['POST'])
 def signup():
     data = request.json
